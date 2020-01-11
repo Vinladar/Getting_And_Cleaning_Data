@@ -36,4 +36,4 @@ X_total <- rbind(X_test, X_train)
 tidy_data <- X_total[grep(".*mean\\(\\)*|.*std\\(\\)", names(X_total))]
 
 # Write a txt file that contains the tidy data
-write.table(X_total, "tidy_data.txt")
+write.table(tidy_data, "tidy_data.txt")
