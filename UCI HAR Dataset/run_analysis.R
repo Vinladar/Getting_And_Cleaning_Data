@@ -33,7 +33,7 @@ X_train <- cbind(subject_train, X_train)
 X_total <- rbind(X_test, X_train)
 
 # Create the new data set with mean and standard deviation
-tidy_data <- X_total[grep(".*mean\\(\\)*|.*std\\(\\)", names(X_total))]
+tidy_data <- X_total[grep(".*mean\\(\\)*|.*std\\(\\)|Activity|Subject", names(X_total))]
 
 # Write a txt file that contains the tidy data
 write.table(tidy_data, "tidy_data.txt")
